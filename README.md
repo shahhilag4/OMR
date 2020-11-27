@@ -1,7 +1,7 @@
 # OMR Reader
 <HTML>
 
-<h3><b>How to install our application in your computer</b></h3>
+<h3>How to install our application in your computer</h3>
 
 1.Clone our repository https://github.com/shahhilag/OMR.git<br>
 2.Open command line and and write "pip install -r requirements.txt"<br>
