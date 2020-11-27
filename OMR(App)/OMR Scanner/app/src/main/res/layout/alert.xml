@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#30066A"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/AlertButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/purple_200"
+        android:checkable="true"
+        android:rotationX="0"
+        android:text="Instructions"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@color/purple_200"
+        app:iconTint="#081A7E"
+        app:rippleColor="@color/white"
+        app:strokeColor="@color/purple_200" />
+
+</LinearLayout>

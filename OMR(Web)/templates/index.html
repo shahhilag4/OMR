@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>OMR Scanner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!--		<link rel="stylesheet" href="assets/css/main.css" />-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+	</head>
+	<body class="is-preload"></body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1><a href="" id="logo">OMR<em> Scanner</em></a></h1>
+						<p style="color:#fff;text-align:center;"> "Optical Mark Recognition System" </p>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+						</nav>
+
+				</div>
+			<!-- Highlights -->
+				<section class="wrapper style1" style="background-color: #0b0b0b">
+					{% if messagehome is defined %}
+					<div class="alert alert-info alert-dismissible">
+						<button type = "button" class="close" data-dismiss = "alert"><b>CLOSE</b></button>
+						<strong>Instruction</strong><br><hr>
+
+    				OMR Sheet And Answer Sheet should contain equal number of questions otherwise you may get wrong result.
+					</div>
+					{% endif %}
+					<div class="container">
+						<div class="row gtr-200">
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<img style="display: block;margin: auto;padding: 5px; width: 100%; filter: invert(100%);" src="{{ url_for('static', filename='images/upload2.jpg') }}"  width="200">
+									<div class="a"><h3 style="color:#fff;text-align: center;margin: auto;display: block;"><b>Step 1</b></h3></div>
+									<p style="color:#fff;text-align: center;margin: auto 0px;padding: 16px;"> Upload your .jpg scanned image file </p>
+									<form action="/scan" method="post" enctype = "multipart/form-data" >
+<!--										<label for="files">Select files:</label>-->
+  										<input  style="border: 1px solid #fff; width: 100%; margin: auto;" type="file" id="files" name="file[]" multiple><br>
+										<button type="submit"  style="display: block; margin:auto">Scan</button>
+									</form>
+									
+									
+									
+									{% if valnn is defined %}
+									{% if message1 is defined %}
+		 							<div class="alert alert-danger" role="alert">
+  									{{message1}}
+									</div>
+									 {% endif %}
+									 {% endif %}
+									 {% if valnnn is defined %}
+									 {% if message is defined %}
+									  <div class="alert alert-success" role="alert">
+									   {{message}}
+									 </div>
+									  {% endif %}
+									  {% endif %}
+									{% if msgval is defined %}
+									 {% if message is defined %}
+									  <div class="alert alert-danger" role="alert">
+									   {{message}}
+									 </div>
+									  {% endif %}
+									  {% endif %}
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<img style="display: block;margin: auto;padding: 5px; width: 100%; filter: invert(100%);" src="{{ url_for('static', filename='images/csv2.jpg') }}"  width="200">
+
+									<h3 style="color:#fff;text-align: center;margin: auto;display: block;">Step 2</h3>
+									<p style="color:#fff;text-align: center;margin: auto 0px;padding: 16px;">Upload answer key in .csv file.</p>
+									<form action="/upload" method="post" enctype = "multipart/form-data" style="padding-top: 25px;">
+<!--										<label for="files">Select files:</label>-->
+  										<input style="border: 1px solid #fff; width: 100%; margin:auto;" type="file" id="files" name="file[]" multiple><br>
+										<button type="submit" style="display: block; margin:auto;">Upload</button>
+									</form>
+									
+									
+									
+									{% if val is defined %}
+									{% if message1 is defined %}
+		 							<div class="alert alert-danger" role="alert">
+  									{{message1}}
+									</div>
+									 {% endif %}
+									 {% endif %}
+
+									 {% if valn is defined %}
+									 {% if message1 is defined %}
+									  <div class="alert alert-success" role="alert">
+									   {{message1}}
+									 </div>
+									  {% endif %}
+									  {% endif %}
+
+									{% if fmsgval is defined %}
+									{% if message1 is defined %}
+		 							<div class="alert alert-danger" role="alert">
+  									{{message1}}
+									</div>
+									 {% endif %}
+									 {% endif %}
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<img style="display: block;margin: auto;padding: 5px; width: 100%;  filter: invert(100%);" src="{{ url_for('static', filename='images/res2.jpg') }}" width="200">
+
+									<h3 style="color:#fff;text-align: center;margin: auto;display: block;">Step 3</h3>
+									<p  style="color:#fff;text-align: center;margin: auto 0px;padding: 16px;">Result will upload under results tab.</p>
+									<form action="/result" method="post" enctype = "multipart/form-data" style="padding-top: 70px;">
+										<button type="submit" style="display: block;margin:auto;">See Results</button>
+									</form>
+									{% if message3 is defined %}
+									  <div class="alert alert-danger" role="alert">
+									   {{message3}}
+									  </div>
+									{% endif %}
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+
+			<!-- Gigantic Heading -->
+				<section class="wrapper style2">
+					<div class="container" >
+						<header class="major">
+							<h2 style="text-align: center;margin: auto;">Our Aim</h2>
+							<p style="text-align:center; margin: auto;">To Create The Best OMR Evaluation Application</p>
+							<br>
+							<div class="container" align="center">
+							<a href="/return-app/" target="_blank"><button class='btn btn-default'>Download Our App</button></a>
+   							
+							<br><br><br>
+                            				<p>&copy;Team Concept Squad</p>
+                            				</div>
+						</header>
+					</div>
+				</section>
+				
+				
+					
+		<!-- Scripts -->
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		</div>
+	</body>
+</html>
