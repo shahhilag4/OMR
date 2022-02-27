@@ -62,7 +62,7 @@ Project Documentation
 <br>
 
 
-<h4 align="center"><b>Video Demonstartion can be found<a href="https://youtu.be/jI5l3ptFfz8">here</a>.</b></h4>
+<h4 align="center"><b>Video Demonstartion can be found <a href="https://youtu.be/jI5l3ptFfz8">here</a>.</b></h4>
 <br>
 <br>  
 
