@@ -1,7 +1,15 @@
 <h1 align="center">OMR Scanner</h1>
 <h3 align="center">A fullstack web and mobile application for easy evaluation of OMR sheets</h3>
 <br><br>
-<p align="center" style="margin-top:10px">
+
+<hr>
+<h3 align="center">Achievement</h3>
+<hr>
+<ol>
+<li>Winner of HackEd V1.0 Hackathon conducted by HackerEarth and K12 Techno services.</li> 
+</ol>
+<br><br>
+
 <hr>
 <h3 align="center">
 Project Documentation
@@ -26,7 +34,7 @@ Project Documentation
 </ul>
 <br>
 
-<div align="center"><img src="./static/images/Picture1.jpg" style="height: 300px;" /></div>
+<div align="center"><img src="Picture1.jpg" style="height: 300px;" /></div>
 
 <hr>
 <h3 align="center">Unique Features</h3>
@@ -41,6 +49,7 @@ Project Documentation
 <br>
 <br>
 
+<hr>
 <h3 align="center">Steps for installation</h3>
 <hr>
 <ol>
