@@ -34,7 +34,7 @@ Project Documentation
 </ul>
 <br>
 
-<div align="center"><img src="Picture1.jpg" style="height: 300px;" /></div>
+![Picture1](https://user-images.githubusercontent.com/64307441/220327564-03f8b718-551d-4ad8-999b-f36132adafa6.jpg)
 
 <hr>
 <h3 align="center">Unique Features</h3>
