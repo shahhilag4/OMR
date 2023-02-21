@@ -34,7 +34,9 @@ Project Documentation
 </ul>
 <br>
 
-![Picture1](https://user-images.githubusercontent.com/64307441/220327564-03f8b718-551d-4ad8-999b-f36132adafa6.jpg)
+<div align="center">
+<img alt="Logo1" src="https://user-images.githubusercontent.com/64307441/220327564-03f8b718-551d-4ad8-999b-f36132adafa6.jpg">
+</div>
 
 <hr>
 <h3 align="center">Unique Features</h3>
