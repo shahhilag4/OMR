@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             dialog.show();
         }
         else {
-            web.loadUrl("http://52.186.137.69:5000/");
+            web.loadUrl("http://shahhilag4.pythonanywhere.com/");
         }
 
 
